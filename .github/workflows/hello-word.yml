@@ -7,9 +7,10 @@ on:
     branches: ["main"]
 
 jobs:
-  hello:
+  ci-cd:
     runs-on: ubuntu-latest
     steps:
-      - name: hello-word
-        run: echo "Hello World"
+      - uses: action/checkout@v3
+      - name: Docker-Build
+        run: docker build -t teste .
    
